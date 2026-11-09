@@ -8,7 +8,7 @@ A cloud workstation for coding agents, deployable to Railway in one click. Open 
 - **Persistent storage**: your home folder, agent logins and projects live on a Railway volume
 - **One password** protects everything
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/ai-coding-workstation)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/ai-coding-workstat-1)
 
 ## Variables
 
