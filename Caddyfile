@@ -1,0 +1,24 @@
+{
+	admin off
+	auto_https off
+}
+
+:{$PORT} {
+	# Railway health check; no secrets behind it
+	handle /healthz {
+		respond "ok" 200
+	}
+
+	# Plain web terminal, handy on phones. Basic auth with the same password.
+	handle /terminal* {
+		basic_auth {
+			dev {$PASSWORD_HASH}
+		}
+		reverse_proxy 127.0.0.1:7681
+	}
+
+	# VS Code in the browser; it has its own password page
+	handle {
+		reverse_proxy 127.0.0.1:8443
+	}
+}

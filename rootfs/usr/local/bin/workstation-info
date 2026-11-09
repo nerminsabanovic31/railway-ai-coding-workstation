@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Welcome banner shown in every new shell. Silence it with WORKSTATION_QUIET=1.
+cat <<'EOF'
+
+  AI Coding Workstation
+  ─────────────────────
+  claude      Claude Code     (first run: follow the login link, or set ANTHROPIC_API_KEY)
+  codex       OpenAI Codex    (first run: codex login --device-auth, or set OPENAI_API_KEY)
+  gemini      Gemini CLI      (first run: sign in with Google, or set GEMINI_API_KEY)
+  opencode    OpenCode        (bring any provider key)
+
+  Projects live in /data/projects and your home in /data/home; both survive redeploys.
+  Close the tab any time: tmux keeps the "main" session running. Reattach: tmux a -t main
+
+EOF
